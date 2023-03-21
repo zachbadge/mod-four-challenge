@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Trivia Game</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    </head>
 
+    <body> 
+        <header>
+            <h4 id="view-high-scores">View High Scores</h4> 
+            <h4 class="timer">Time Left: <span id="timer"></span></h4>
+        </header>
+
+        <div id="starter-container" class="show">
+            <div class="container start">
+                <h1>JavaScript Trivia Game</h1>  
+                <p>You have 30 seconds to answer the following JavaScipt related trivia questions. If you get the question right, you get five points.
+                Get it wrong and it will take away 3 from your score and 3 seconds of your remaining time!
+                </p>
+                <button class="btn startend" id="start-game">Start The Game</button>
+            </div>    
+        </div>
+
+        <div id="question-container" class="hide">
+            <div class="container questions">
+                <div id="question"></div>
+                <div id="answer-buttons" class="btn-grid"></div>
+            </div>
+        </div>
+
+        <div id="end-container" class="hide">
+           <div class="container end">
+            <div id=score-banner>
+                <h1>You did it!</h1>
+            </div>  
+            <form id="initials-form" class="initials">
+              <p> Enter Your Initials:
+                <input type="text" name="initials" id="initials" class="text-input" />
+                <button class="btn startend" id="sumbit-score" type="submit">Submit Your Score</button> </p>
+              </form>
+            </div>
+        </div>
+
+        <div id="high-score-container" class="hide">
+          <div class="high-scores container">
+            <h1 class="high-score">High Scores</h1>
+            <ol id="high-score-list" class="score-list"></ol>
+        <div>
+            <button class="btn" id="go-back">Go Back</button>
+            <button class="btn" id="clear-high-scores">Clear All Scores</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="hide" id="correct">
+        <h2>Yep!</h2>
+    </div>
+    <div class="hide" id="wrong">
+        <h2>Nope.</h2>
+    </div>
+
+    <script src="./assets/js/script.js"></script> 
+</body>
+</html>
